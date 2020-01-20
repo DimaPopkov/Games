@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        int sok = 1;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,6 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +30,8 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Утя '-'");
+            GameInfoForm form = new GameInfoForm();
+            form.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
