@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.вк6ку6укToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ываывафToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,21 +46,20 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonBlitz = new System.Windows.Forms.Button();
+            this.buttonTanks = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonMario = new System.Windows.Forms.Button();
+            this.buttonGTA = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -72,6 +72,16 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 24);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(792, 400);
+            this.webBrowser1.TabIndex = 1;
+            this.webBrowser1.Url = new System.Uri("https://steam.com", System.UriKind.Absolute);
             // 
             // menuStrip1
             // 
@@ -178,17 +188,15 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(781, 413);
             this.button9.TabIndex = 4;
-            this.button9.Text = "ну да ну да пошел я нахер";
             this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.button6);
+            this.tabPage1.Controls.Add(this.buttonBlitz);
+            this.tabPage1.Controls.Add(this.buttonTanks);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.buttonMario);
+            this.tabPage1.Controls.Add(this.buttonGTA);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -199,61 +207,38 @@
             this.tabPage1.Text = "Привет ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // buttonBlitz
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
-            this.tabControl1.TabIndex = 6;
+            this.buttonBlitz.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonBlitz.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.news_wotb_windows_10_artwork;
+            this.buttonBlitz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBlitz.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBlitz.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonBlitz.Location = new System.Drawing.Point(3, 279);
+            this.buttonBlitz.Name = "buttonBlitz";
+            this.buttonBlitz.Size = new System.Drawing.Size(359, 125);
+            this.buttonBlitz.TabIndex = 6;
+            this.buttonBlitz.UseVisualStyleBackColor = false;
+            this.buttonBlitz.Click += new System.EventHandler(this.button6_Click);
             // 
-            // webBrowser1
+            // buttonTanks
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 24);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(792, 400);
-            this.webBrowser1.TabIndex = 1;
-            this.webBrowser1.Url = new System.Uri("https://steam.com", System.UriKind.Absolute);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._323007_alexfas01;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button7.Location = new System.Drawing.Point(443, 279);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(329, 125);
-            this.button7.TabIndex = 7;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.news_wotb_windows_10_artwork;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Enabled = false;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button6.Location = new System.Drawing.Point(3, 279);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(359, 125);
-            this.button6.TabIndex = 6;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonTanks.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonTanks.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.tanks;
+            this.buttonTanks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTanks.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTanks.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonTanks.Location = new System.Drawing.Point(443, 279);
+            this.buttonTanks.Name = "buttonTanks";
+            this.buttonTanks.Size = new System.Drawing.Size(329, 125);
+            this.buttonTanks.TabIndex = 7;
+            this.buttonTanks.UseVisualStyleBackColor = false;
+            this.buttonTanks.Click += new System.EventHandler(this.buttonTanks_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Без_названия;
+            this.button1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.pubg;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -263,35 +248,35 @@
             this.button1.TabIndex = 0;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.PUBGClick);
             // 
-            // button5
+            // buttonMario
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Super_Mario_Wallpaper_HD;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button5.Location = new System.Drawing.Point(443, 148);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(329, 125);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonMario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonMario.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Super_Mario_Wallpaper_HD;
+            this.buttonMario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMario.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonMario.Location = new System.Drawing.Point(443, 148);
+            this.buttonMario.Name = "buttonMario";
+            this.buttonMario.Size = new System.Drawing.Size(329, 125);
+            this.buttonMario.TabIndex = 4;
+            this.buttonMario.UseVisualStyleBackColor = false;
+            this.buttonMario.Click += new System.EventHandler(this.buttonMario_Click);
             // 
-            // button2
+            // buttonGTA
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.нон;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Location = new System.Drawing.Point(443, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(329, 136);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonGTA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonGTA.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.нон;
+            this.buttonGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonGTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
+            this.buttonGTA.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonGTA.Location = new System.Drawing.Point(443, 6);
+            this.buttonGTA.Name = "buttonGTA";
+            this.buttonGTA.Size = new System.Drawing.Size(329, 136);
+            this.buttonGTA.TabIndex = 1;
+            this.buttonGTA.UseVisualStyleBackColor = false;
+            this.buttonGTA.Click += new System.EventHandler(this.buttonGTA_Click);
             // 
             // button3
             // 
@@ -318,7 +303,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.TabIndex = 6;
             // 
             // Form1
             // 
@@ -337,8 +333,8 @@
             this.menuStrip1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,11 +356,11 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonTanks;
+        private System.Windows.Forms.Button buttonBlitz;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonMario;
+        private System.Windows.Forms.Button buttonGTA;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControl1;

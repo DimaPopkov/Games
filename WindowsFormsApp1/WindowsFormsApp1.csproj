@@ -109,7 +109,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Без названия.jpg" />
+    <None Include="Resources\pubg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\нон.jpg" />
@@ -124,7 +124,7 @@
     <None Include="Resources\Super_Mario_Wallpaper_HD.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\323007-alexfas01.jpg" />
+    <None Include="Resources\tanks.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

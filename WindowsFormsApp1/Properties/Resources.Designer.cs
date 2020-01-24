@@ -63,9 +63,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _323007_alexfas01 {
+        internal static System.Drawing.Bitmap news_wotb_windows_10_artwork {
             get {
-                object obj = ResourceManager.GetObject("323007-alexfas01", resourceCulture);
+                object obj = ResourceManager.GetObject("news.wotb_windows_10_artwork", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap news_wotb_windows_10_artwork {
+        internal static System.Drawing.Bitmap pubg {
             get {
-                object obj = ResourceManager.GetObject("news.wotb_windows_10_artwork", resourceCulture);
+                object obj = ResourceManager.GetObject("pubg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Без_названия {
+        internal static System.Drawing.Bitmap tanks {
             get {
-                object obj = ResourceManager.GetObject("Без названия", resourceCulture);
+                object obj = ResourceManager.GetObject("tanks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
