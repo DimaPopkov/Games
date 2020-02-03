@@ -23,39 +23,11 @@ namespace WindowsFormsApp1
 
 
 
-        private void PUBGClick(object sender, EventArgs e)
-        {
-            GameInfoForm form = new GameInfoForm("PUBG");
-            form.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            GameInfoForm form = new GameInfoForm("Standoff2");
-            form.Show();
-        }
-
-        private void buttonGTA_Click(object sender, EventArgs e)
-        {
-            GameInfoForm form = new GameInfoForm("GTA");
-            form.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            GameInfoForm form = new GameInfoForm("Blitz");
-            form.Show();
-        }
 
         private void buttonTanks_Click(object sender, EventArgs e)
         {
-            GameInfoForm form = new GameInfoForm("tank");
-            form.Show();
-        }
-
-        private void buttonMario_Click(object sender, EventArgs e)
-        {
-            GameInfoForm form = new GameInfoForm("Mario");
+            Button btn = (Button)sender;
+            GameInfoForm form = new GameInfoForm(btn.Tag.ToString());
             form.Show();
         }
     }
