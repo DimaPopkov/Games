@@ -30,5 +30,12 @@ namespace WindowsFormsApp1
             GameInfoForm form = new GameInfoForm(btn.Tag.ToString());
             form.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.Show();
+
+        }
     }
 }
