@@ -105,5 +105,10 @@ namespace WindowsFormsApp1
                 button1_Click_1(null, null);
             }
         }
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
