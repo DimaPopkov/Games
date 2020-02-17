@@ -16,8 +16,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            pictureBox1.Load("../../Resources/" + game + ".jpg");
             textBox1.Text = "Игра: " + game;
+            try
+            {
+                pictureBox1.Load("../../Resources/" + game + ".jpg");
+            }
+            catch (Exception) { }
 
             if (game == "PUBG")
             {
@@ -57,6 +61,10 @@ namespace WindowsFormsApp1
                     " в бою для платящих игроков.";
             }
         }
-        
+
+        private void GameInfoForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

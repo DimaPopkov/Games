@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonBlitz = new System.Windows.Forms.Button();
             this.buttonTanks = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,7 +41,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -64,6 +63,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Описание";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(368, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 398);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Фильтр";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonBlitz
             // 
@@ -198,16 +207,6 @@
             this.tabPage2.Text = "Steam";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(368, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 136);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Фильтр";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,7 +225,6 @@
         }
 
         #endregion
-        private System.ServiceProcess.ServiceController serviceController1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button buttonTanks;
         private System.Windows.Forms.Button buttonBlitz;
