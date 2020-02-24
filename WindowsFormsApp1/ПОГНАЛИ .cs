@@ -12,16 +12,18 @@ namespace WindowsFormsApp1
 {
     public struct Game
     {
+        public string Silka;
         public string name;
         public string shanr;
         public int price;
         public Button btn;
-        public Game(string name1,string shanr1, int price1, Button btn1)
+        public Game(string name1,string shanr1, int price1, string Silka1)
         {
+            Silka = Silka1;
             name = name1;
             shanr = shanr1;
             price = price1;
-            btn = btn1;
+            btn = new Button();
         }
     }
 
@@ -35,33 +37,53 @@ namespace WindowsFormsApp1
 
     public partial class Form2 : Form
     {
-        Game[] games = new Game[50];
+        Game[] games = new Game[12];
 
         public Form2()
         {
             InitializeComponent();
 
-            games[0] = new Game("WoT", "action", 0, button0);
-            games[1] = new Game("Mario", "arkade", 0, button1);
-            games[2] = new Game("PUBG lite", "shuter,butle royal", 0, button2);
-            games[3] = new Game("GTA V", "arkade,action", 1990, button3);
-            games[4] = new Game("WoT blitz", "action", 0, button4);
-            games[5] = new Game("Standoff2", "shuter", 0, button5);
-            games[6] = new Game("War thunder", "action", 399, button6);
-            games[7] = new Game("World of Warsips", "action", 0, button7);
-           
-            /*games[8] = new Game("PUBG", "shuter", 0);
-              games[9] = new Game("PUBG", "shuter", 0);
-              games[10] = new Game("PUBG", "shuter", 0);
-              games[11] = new Game("PUBG", "shuter", 0);
-            */
+            games[0] = new Game("WoT", "action", 499, "");
+            games[1] = new Game("Mario", "arkade", 20000, "");
+            games[2] = new Game("PUBG lite", "shooter,butle royal", 299, "");
+            games[3] = new Game("GTA V", "arkade,action", 1990, "");
+            games[4] = new Game("WoT blitz", "action", 0, "https://store.steampowered.com/app/444200/World_of_Tanks_Blitz/");
+            games[5] = new Game("Standoff2", "shooter", 0, "");
+            games[6] = new Game("War thunder", "action", 399, "");
+            games[7] = new Game("World of Warships", "action", 10, "https://store.steampowered.com/app/552990/World_of_Warships/");
+            games[8] = new Game("World of Warplanes", "action", 20, "https://store.steampowered.com/app/790710/World_of_Warplanes/");
+            games[9] = new Game("Rocket League", "shuter", 133, "https://store.steampowered.com/app/848820/Rocket_League_x_Monstercat_Vol_3/");
+            games[10]= new Game("Rust", "action", 0, "https://store.steampowered.com/app/252490/Rust/");
+            games[11]= new Game("CHtoto", "shooter,action,butle royal,arkade", 100, "");
+            
 
+            int x = 10;
+            int y = 150;
+            for (int i = 0; i < games.Length; i++)
+            {
+                games[i].btn.AccessibleDescription = games[i].price.ToString();
+                games[i].btn.AccessibleName = games[i].Silka;
+                games[i].btn.Text = games[i].name;
+                games[i].btn.Tag = games[i].name;
+                games[i].btn.Location = new Point(x, y);
+                games[i].btn.Size = new Size(100, 50);
+                games[i].btn.Click += new EventHandler(button1_Click);
+                Controls.Add(games[i].btn);
+                x = x + 110;
+
+                if (x > Width - 100)
+                {
+                    x = 10;
+                    y = y + 60;
+                }
+            }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            Button btn = (Button)sender;
+            GameInfoForm form = new GameInfoForm(btn.Tag.ToString(), btn.AccessibleName, Convert.ToInt32(btn.AccessibleDescription));
             form.Show();
         }
 
@@ -72,7 +94,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < 8; i++)
+            int x = 10;
+            int y = 150;
+            for (int i = 0; i < games.Length; i++)
             {
                 bool nadoSkryt = false;
                 games[i].btn.Visible = false;
@@ -89,11 +113,29 @@ namespace WindowsFormsApp1
                     nadoSkryt = true;
                 }
 
+                else if (Shanr.CheckedItems.Count > 0)
+                {
+                    nadoSkryt = true;
+                    if (Shanr.CheckedItems.Contains(games[i].shanr))
+                    {
+                        nadoSkryt = false;
+                    }
+                }
+
                 if (!nadoSkryt)
                 {
+                    games[i].btn.Location = new Point(x, y);
                     games[i].btn.Visible = true;
                     games[i].btn.Text = games[i].name +
-                        " (" + games[i].price.ToString() +")";
+                        " (" + games[i].price.ToString() +")"; 
+                    
+                    x = x + 110;
+
+                    if (x > Width - 100)
+                    {
+                        x = 10;
+                        y = y + 60;
+                    }
                 }
             }
         }
@@ -108,6 +150,18 @@ namespace WindowsFormsApp1
 
         private void button0_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Shanr_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            button1_Click_1(null, null);
+
+        }
+
+        private void Shanr_MouseClick(object sender, MouseEventArgs e)
+        {
+            button1_Click_1(null, null);
 
         }
     }

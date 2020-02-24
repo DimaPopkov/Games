@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         private void buttonTanks_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            GameInfoForm form = new GameInfoForm(btn.Tag.ToString());
+            GameInfoForm form = new GameInfoForm(btn.Tag.ToString(), btn.AccessibleName, Convert.ToInt32(btn.AccessibleDescription));
             form.Show();
         }
 
