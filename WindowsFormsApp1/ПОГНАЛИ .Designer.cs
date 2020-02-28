@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form2
+    partial class Filter
     {
         /// <summary>
         /// Required designer variable.
@@ -83,9 +83,10 @@
             // Shanr
             // 
             this.Shanr.FormattingEnabled = true;
+            this.Shanr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Shanr.Items.AddRange(new object[] {
             "shooter",
-            "akade",
+            "arkade",
             "action",
             "butle royal"});
             this.Shanr.Location = new System.Drawing.Point(456, 31);
@@ -105,7 +106,7 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Жанры";
             // 
-            // Form2
+            // Filter
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,8 +119,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.maxText);
             this.Controls.Add(this.buttonF);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "Filter";
+            this.Text = "Фильтр";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

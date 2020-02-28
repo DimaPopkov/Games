@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            Filter form = new Filter();
             form.Show();
 
         }

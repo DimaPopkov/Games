@@ -35,18 +35,18 @@ namespace WindowsFormsApp1
 
 
 
-    public partial class Form2 : Form
+    public partial class Filter : Form
     {
         Game[] games = new Game[12];
 
-        public Form2()
+        public Filter()
         {
             InitializeComponent();
 
-            games[0] = new Game("WoT", "action", 499, "");
+            games[0] = new Game("WoT", "action", 499, "https://worldoftanks.ru");
             games[1] = new Game("Mario", "arkade", 20000, "");
-            games[2] = new Game("PUBG lite", "shooter,butle royal", 299, "");
-            games[3] = new Game("GTA V", "arkade,action", 1990, "");
+            games[2] = new Game("PUBG lite", "butle royal", 299, "https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/");
+            games[3] = new Game("GTA V", "arkade", 1990, "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/");
             games[4] = new Game("WoT blitz", "action", 0, "https://store.steampowered.com/app/444200/World_of_Tanks_Blitz/");
             games[5] = new Game("Standoff2", "shooter", 0, "");
             games[6] = new Game("War thunder", "action", 399, "");
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
             games[8] = new Game("World of Warplanes", "action", 20, "https://store.steampowered.com/app/790710/World_of_Warplanes/");
             games[9] = new Game("Rocket League", "shuter", 133, "https://store.steampowered.com/app/848820/Rocket_League_x_Monstercat_Vol_3/");
             games[10]= new Game("Rust", "action", 0, "https://store.steampowered.com/app/252490/Rust/");
-            games[11]= new Game("CHtoto", "shooter,action,butle royal,arkade", 100, "");
+            games[11]= new Game("CHtoto", "shooter,action,butle royal,arkade", 100, "https://yandex.kz/search/?lr=210707&clid=9403&oprnd=4525458819&text=вопросительный%20знак%20картинка");
             
 
             int x = 10;
