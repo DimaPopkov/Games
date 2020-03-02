@@ -35,6 +35,8 @@
             this.minText = new System.Windows.Forms.TextBox();
             this.Shanr = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.voz = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // buttonF
@@ -89,9 +91,9 @@
             "arkade",
             "action",
             "butle royal"});
-            this.Shanr.Location = new System.Drawing.Point(456, 31);
+            this.Shanr.Location = new System.Drawing.Point(389, 31);
             this.Shanr.Name = "Shanr";
-            this.Shanr.Size = new System.Drawing.Size(120, 79);
+            this.Shanr.Size = new System.Drawing.Size(86, 79);
             this.Shanr.TabIndex = 13;
             this.Shanr.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.Shanr_ItemCheck);
             this.Shanr.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Shanr_MouseClick);
@@ -100,11 +102,35 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(453, 9);
+            this.label3.Location = new System.Drawing.Point(386, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Жанры";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(488, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Возраст";
+            // 
+            // voz
+            // 
+            this.voz.FormattingEnabled = true;
+            this.voz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.voz.Items.AddRange(new object[] {
+            "0+",
+            "6+",
+            "12+",
+            "16+",
+            "18+"});
+            this.voz.Location = new System.Drawing.Point(491, 31);
+            this.voz.Name = "voz";
+            this.voz.Size = new System.Drawing.Size(120, 79);
+            this.voz.TabIndex = 17;
             // 
             // Filter
             // 
@@ -112,6 +138,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 339);
+            this.Controls.Add(this.voz);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Shanr);
             this.Controls.Add(this.label2);
@@ -136,5 +164,7 @@
         private System.Windows.Forms.TextBox minText;
         private System.Windows.Forms.CheckedListBox Shanr;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckedListBox voz;
     }
 }

@@ -112,5 +112,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void скачатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != "")
+            {
+                pictureBox1.Image.Save(saveFileDialog1.FileName);
+                MessageBox.Show("Сохранено");
+            }
+        }
     }
 }
