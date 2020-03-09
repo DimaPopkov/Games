@@ -31,14 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameInfoForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.скачатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.марсельОнимэшнекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.скачатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.марсельОнимэшнекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,27 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.скачатьToolStripMenuItem,
+            this.марсельОнимэшнекToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(234, 48);
+            // 
+            // скачатьToolStripMenuItem
+            // 
+            this.скачатьToolStripMenuItem.Name = "скачатьToolStripMenuItem";
+            this.скачатьToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.скачатьToolStripMenuItem.Text = "скачать информацию о игре";
+            this.скачатьToolStripMenuItem.Click += new System.EventHandler(this.скачатьToolStripMenuItem_Click);
+            // 
+            // марсельОнимэшнекToolStripMenuItem
+            // 
+            this.марсельОнимэшнекToolStripMenuItem.Name = "марсельОнимэшнекToolStripMenuItem";
+            this.марсельОнимэшнекToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.марсельОнимэшнекToolStripMenuItem.Text = "Марсель онимэшнек";
             // 
             // textBox1
             // 
@@ -95,32 +117,22 @@
             this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 10;
             // 
-            // contextMenuStrip1
+            // label4
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.скачатьToolStripMenuItem,
-            this.марсельОнимэшнекToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(234, 48);
-            // 
-            // скачатьToolStripMenuItem
-            // 
-            this.скачатьToolStripMenuItem.Name = "скачатьToolStripMenuItem";
-            this.скачатьToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.скачатьToolStripMenuItem.Text = "скачать информацию о игре";
-            this.скачатьToolStripMenuItem.Click += new System.EventHandler(this.скачатьToolStripMenuItem_Click);
-            // 
-            // марсельОнимэшнекToolStripMenuItem
-            // 
-            this.марсельОнимэшнекToolStripMenuItem.Name = "марсельОнимэшнекToolStripMenuItem";
-            this.марсельОнимэшнекToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.марсельОнимэшнекToolStripMenuItem.Text = "Марсель онимэшнек";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(399, 331);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Дабавить  в карзину";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // GameInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.ToolStripMenuItem скачатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem марсельОнимэшнекToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label label4;
     }
 }
