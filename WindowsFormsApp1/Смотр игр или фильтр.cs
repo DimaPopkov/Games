@@ -26,9 +26,9 @@ namespace WindowsFormsApp1
 
         private void buttonTanks_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            /*Button btn = (Button)sender;
             GameInfoForm form = new GameInfoForm(btn.Tag.ToString(), btn.AccessibleName, Convert.ToInt32(btn.AccessibleDescription));
-            form.Show();
+            form.Show();*/
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +36,12 @@ namespace WindowsFormsApp1
             Filter form = new Filter();
             form.Show();
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Корзина form = new Корзина();
+            form.Show();
         }
     }
 }

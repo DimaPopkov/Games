@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
 
     public partial class Filter : Form
     {
-        Game[] games = new Game[12];
+        public static Game[] games = new Game[12];
 
         public Filter()
         {
@@ -57,19 +57,16 @@ namespace WindowsFormsApp1
             games[9] = new Game("Rocket League", "shuter", 133, "6+", "https://store.steampowered.com/app/848820/Rocket_League_x_Monstercat_Vol_3/");
             games[10]= new Game("Rust", "action", 0,"18+", "https://store.steampowered.com/app/252490/Rust/");
             games[11]= new Game("CHtoto", "shooter,action,butle royal,arkade", 100, "16+", "https://yandex.kz/search/?lr=210707&clid=9403&oprnd=4525458819&text=вопросительный%20знак%20картинка");
-            
+
 
             int x = 10;
             int y = 150;
             for (int i = 0; i < games.Length; i++)
             {
-                games[i].btn.AccessibleDescription = games[i].price.ToString();
-                games[i].btn.AccessibleName = games[i].Silka;
                 games[i].btn.Text = games[i].name;
-                games[i].btn.Tag = games[i].name;
                 games[i].btn.Location = new Point(x, y);
                 games[i].btn.Size = new Size(100, 50);
-                games[i].btn.Click += new EventHandler(button1_Click);
+                games[i].btn.Click += new EventHandler(openGame);
                 Controls.Add(games[i].btn);
                 x = x + 110;
 
@@ -82,11 +79,20 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+        /// <summary>
+        /// Открываем игру в новой форме
+        /// </summary>
+        public static void openGame(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            GameInfoForm form = new GameInfoForm(btn.Tag.ToString(), btn.AccessibleName, Convert.ToInt32(btn.AccessibleDescription));
-            form.Show();
+            for (int i = 0; i < games.Length; i++)
+            {
+                if (((Button)sender).Text == games[i].btn.Text)
+                {
+                    GameInfoForm form = new GameInfoForm(games[i]);
+                    form.Show();
+                }
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Корзина.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Корзина.Designer.cs">
+      <DependentUpon>Корзина.cs</DependentUpon>
+    </Compile>
     <Compile Include="Смотр игр или фильтр.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Корзина.resx">
+      <DependentUpon>Корзина.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Смотр игр или фильтр.resx">
       <DependentUpon>Смотр игр или фильтр.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tanks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kot.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
