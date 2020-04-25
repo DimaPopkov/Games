@@ -1,0 +1,14 @@
+WoT, action, 499, 0+, https://worldoftanks.ru
+Mario, arkade, 20000, 0+, https://worldoftanks.ru
+PUBG lite, butle royal, 299, 12+, https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/
+GTA V, arkade, 1990, 18+, https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/
+WoT blitz, action, 0, 6+, https://store.steampowered.com/app/444200/World_of_Tanks_Blitz/
+Standoff2, shooter, 0, 16+, https://worldoftanks.ru
+War thunder, action, 399, 6+, https://worldoftanks.ru
+World of Warships, action, 10, 12+, https://store.steampowered.com/app/552990/World_of_Warships/
+World of Warplanes, action, 20, 12+, https://store.steampowered.com/app/790710/World_of_Warplanes/
+Rocket League, shuter, 133, 6+, https://store.steampowered.com/app/848820/Rocket_League_x_Monstercat_Vol_3/
+Rust, action, 0, 18+, https://store.steampowered.com/app/252490/Rust/
+CHtoto, shooter, 100, 16+, https://yandex.kz/search/?lr=210707&clid=9403&oprnd=4525458819&text=вопросительный%20знак%20картинка
+вопросительный знак, вопросительный знак вопроса, 0, знак вопроса, знак вопроса знак вопроса
+Леша, Брат, 0, 25, Лешабрат@брат.леша
